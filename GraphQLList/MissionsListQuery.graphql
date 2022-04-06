@@ -1,0 +1,11 @@
+query MissionsList($sort: String, $order: String, $limit: Int, $offset: Int) {
+  launches(sort: $sort, order: $order, limit: $limit, offset: $offset) {
+    mission_name
+    mission_id
+    launch_year
+    rocket {
+      rocket_name
+    }
+    details
+  }
+}
